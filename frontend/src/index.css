@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* 1. Tailwind v4 Theme Configuration */
+@theme {
+  --color-accent: var(--accent);
+  --color-dark-bg: var(--bg-page);
+  --color-main-text: var(--text-main);
+}
+
+/* 2. Global Variables */
+:root {
+  --accent: #aa3bff; 
+  --bg-page: #ffffff;
+  --text-main: #08060d;
+  color-scheme: light;
+}
+
+/* 3. Dark Mode Override */
+.dark {
+  --bg-page: #070707; 
+  --text-main: #f3f4f6;
+  color-scheme: dark;
+}
+
+/* 4. Base Styles - Forced Priority */
+@layer base {
+  body {
+    /* !important ensures Tailwind's default white bg doesn't stick */
+    background-color: var(--bg-page) !important;
+    color: var(--text-main) !important;
+    transition: background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s ease;
+    @apply font-sans antialiased;
+    margin: 0;
+  }
+
+  * {
+    @apply border-slate-200 dark:border-slate-800;
+  }
+}
+
+/* 5. Custom Utilities */
+@layer utilities {
+  .glass-nav {
+    @apply sticky top-0 z-50 backdrop-blur-2xl border-b transition-all duration-300;
+    background-color: color-mix(in srgb, var(--bg-page), transparent 20%);
+    border-color: color-mix(in srgb, var(--text-main), transparent 92%);
+  }
+}
