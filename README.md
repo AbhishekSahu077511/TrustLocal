@@ -49,30 +49,24 @@ TrustLocal is a full-stack web application designed to connect users with local 
 
 ## 📁 Project Structure
 
+```text
 TrustLocal/
-│
 ├── backend/
 │   ├── config/
 │   │   └── db.js
-│   │
 │   ├── controllers/
 │   │   ├── adminController.js
 │   │   ├── authController.js
 │   │   └── bookingController.js
-│   │
 │   ├── middleware/
 │   │   └── authMiddleware.js
-│   │
 │   ├── models/
 │   │   ├── Booking.js
 │   │   └── User.js
-│   │
 │   ├── routes/
 │   │   ├── adminRoutes.js
 │   │   ├── authRoutes.js
 │   │   └── bookingRoutes.js
-│   │
-│   ├── .env
 │   ├── .env.example
 │   ├── .gitignore
 │   ├── index.js
@@ -81,13 +75,10 @@ TrustLocal/
 │
 ├── frontend/
 │   ├── public/
-│   │
 │   ├── src/
 │   │   ├── api/
 │   │   │   └── axios.js
-│   │   │
 │   │   ├── assets/
-│   │   │
 │   │   ├── components/
 │   │   │   ├── BookingCard.jsx
 │   │   │   ├── BookingModal.jsx
@@ -97,10 +88,8 @@ TrustLocal/
 │   │   │   ├── ReviewModal.jsx
 │   │   │   ├── ServiceCard.jsx
 │   │   │   └── ThemePicker.jsx
-│   │   │
 │   │   ├── context/
 │   │   │   └── AuthContext.jsx
-│   │   │
 │   │   ├── pages/
 │   │   │   ├── About.jsx
 │   │   │   ├── AdminDashboard.jsx
@@ -114,26 +103,22 @@ TrustLocal/
 │   │   │   ├── Register.jsx
 │   │   │   ├── Services.jsx
 │   │   │   └── UserDashboard.jsx
-│   │   │
 │   │   ├── utils/
 │   │   │   └── generateInvoice.js
-│   │   │
 │   │   ├── App.css
 │   │   ├── App.jsx
 │   │   ├── index.css
 │   │   └── main.jsx
-│   │
-│   ├── .env
 │   ├── .env.example
 │   ├── .gitignore
 │   ├── eslint.config.js
 │   ├── index.html
 │   ├── package.json
 │   ├── package-lock.json
-│   ├── README.md
 │   └── vite.config.js
 │
 └── README.md
+```
 
 ## 🎯 Project Goals & Vision
 
